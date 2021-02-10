@@ -10,7 +10,7 @@
     </head>
     <body>
       <main id="container">
-        <h1>I nostri libri</h1>
+        <h1>Birre:</h1>
         <table class="table table-dark table-striped table-bordered">
           <thead>
             <tr>
