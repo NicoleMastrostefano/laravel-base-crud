@@ -18,7 +18,7 @@ class CreateBeersTable extends Migration
             $table->string('nome',30);
             $table->string('marca',20);
             $table->float('prezzo',4,2);
-            $table->unsignedDecimal('Alc/Vol', 2, 1);
+            $table->unsignedDecimal('alc_vol',2,1);
             $table->string('descrizione',200);
             $table->timestamps();
         });
