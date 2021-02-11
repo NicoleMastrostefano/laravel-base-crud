@@ -14,3 +14,9 @@
     @endforeach
   </table>
 @endsection
+
+@section('footer')
+<div class="text-right">
+  <a href="{{ route('beers.index')}}"class="btn btn-lg btn-primary">Torna all'elenco</a>
+</div>
+@endsection

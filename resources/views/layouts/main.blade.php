@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}"
   </head>
   <body>
-    <div id="container">
+    <div class="container">
       <header>
         @yield('header')
       </header>
