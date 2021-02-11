@@ -11,6 +11,6 @@ class Beer extends Model
       'marca',
       'prezzo',
       'alc_vol',
-      'descrizione'
+      'descrizione',
     ];
 }

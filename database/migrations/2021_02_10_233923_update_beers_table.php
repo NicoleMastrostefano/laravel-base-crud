@@ -14,7 +14,7 @@ class UpdateBeersTable extends Migration
     public function up()
     {
         Schema::table('beers', function (Blueprint $table) {
-            //
+          $table->float('alc_vol',2,1)->change();
         });
     }
 
@@ -26,7 +26,7 @@ class UpdateBeersTable extends Migration
     public function down()
     {
         Schema::table('beers', function (Blueprint $table) {
-            //
+            $table->unsignedDecimal('alc_vol',2,1)->change();
         });
     }
 }
