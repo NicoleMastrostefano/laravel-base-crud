@@ -17,6 +17,6 @@
 
 @section('footer')
 <div class="text-right">
-  <a href="{{ route('beers.index')}}"class="btn btn-lg btn-primary">Torna all'elenco</a>
+  <a href="{{ route('beers.index')}}"class="btn btn-lg btn-dark">Torna all'elenco</a>
 </div>
 @endsection
