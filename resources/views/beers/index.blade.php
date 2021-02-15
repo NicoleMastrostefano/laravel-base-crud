@@ -39,6 +39,14 @@
       <td>
         <a href="{{ route('beers.edit',$beer->id) }}" class="btn btn-outline-light"><i class="fas fa-pencil-alt"></i></a>
       </td>
+      <td>
+        <form  action="{{ route('beers.destroy', $beer->id)}}" method="post">
+          @csrf
+          @method('DELETE')
+          <button class="btn btn-outline-light"><i class="fas fa-trash-alt"></i></button>
+        </form>
+      </td>
+
     </tr>
     @endforeach
   </tbody>

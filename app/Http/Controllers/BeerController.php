@@ -53,7 +53,7 @@ class BeerController extends Controller
         // $beer->prezzo=$data['prezzo'];
         // $beer->alc_vol=$data['alc_vol'];
         // $beer->descrizione=$data['descrizione'];
-        $book->fill($data);
+        $beer->fill($data);
         $beer->save();
         $newBeer = Beer::orderBy('id', 'DESC')->first();
         return redirect()->route('beers.index',$newBeer);
@@ -110,8 +110,13 @@ class BeerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Beer $beer)
     {
-        //
+        $nome = $beer->nome;
+        $beer->delete();
+
+        return redirect()
+        ->route('beers.index')
+        ->with('message', 'Birra ' . $nome. " cancellata correttamente!");
     }
 }
