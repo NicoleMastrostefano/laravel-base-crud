@@ -38,7 +38,6 @@
     <input type="text" class="form-control" id='descrizione' name="descrizione" placeholder="descrizione"
     value="{{ $beer->descrizione }}">
   </div>
-
   <div class="text-right">
     <input type="submit" value="Salva"class="btn btn-primary">
   <a href="{{route('beers.index') }}"class="btn btn-dark">Indietro</a>

@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('header')
-  <h1 style="text-align:center"class="mt-5">Birra artigianale: le migliori IPA italiane</h1>
+  <h1 style="text-align:center"class="my-5">Birra artigianale: le migliori IPA italiane</h1>
 @endsection
 
 @section('content')
@@ -46,7 +46,6 @@
           <button class="btn btn-outline-light"><i class="fas fa-trash-alt"></i></button>
         </form>
       </td>
-
     </tr>
     @endforeach
   </tbody>
@@ -55,6 +54,6 @@
 
 @section('footer')
 <div class="text-right">
-  <a href="{{ route('beers.create')}}"class="btn btn-lg btn-dark">Crea un nuovo record</a>
+  <a href="{{ route('beers.create')}}"class="btn btn-lg btn-dark mb-5">Crea un nuovo record</a>
 </div>
 @endsection
