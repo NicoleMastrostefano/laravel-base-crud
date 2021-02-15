@@ -5,6 +5,12 @@
 @endsection
 
 @section('content')
+@if (session('message'))
+<div class="alert alert-success">
+  {{ session('message') }}
+</div>
+@endif
+
 <table class="table table-dark table-striped table-bordered">
   <thead>
     <tr>
@@ -28,7 +34,10 @@
       <td> {{ $beer->descrizione }}</td>
       <th> {{ $beer->created_at }}</th>
       <td>
-        <a href="{{ route('beers.show',['beer'=>$beer->id]) }}" class="btn btn-outline-light">Mostra</a>
+        <a href="{{ route('beers.show',$beer->id) }}" class="btn btn-outline-light"><i class="fas fa-search-plus"></i></a>
+      </td>
+      <td>
+        <a href="{{ route('beers.edit',$beer->id) }}" class="btn btn-outline-light"><i class="fas fa-pencil-alt"></i></a>
       </td>
     </tr>
     @endforeach
